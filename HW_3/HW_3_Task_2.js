@@ -5,13 +5,13 @@
 // и выводит сумму равную n + nn + nnn, где n не перемножаются, а конкатенируются.
 
 // Вариант 1:
-let n;
-let sum = Number("" + n) + Number("" + n + n) + Number("" + n + n + n);
+const n = 1;
+const sum = Number("" + n) + Number("" + n + n) + Number("" + n + n + n);
 console.log(sum)
 
 // Вариант 2:
-// let n;
-// let nn = String(n) + String(n);
-// let nnn = String(n) + String(n) + String(n);
-// let sum = n + Number(nn) + Number(nnn);
+// const n = 1;
+// const nn = String(n) + String(n);
+// const nnn = String(n) + String(n) + String(n);
+// const sum = n + Number(nn) + Number(nnn);
 // console.log(sum);

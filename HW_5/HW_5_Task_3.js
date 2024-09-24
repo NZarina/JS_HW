@@ -11,15 +11,11 @@ const vowelsEN = "AEIOU"; // все гласные английского алф
 let numberOfConsonants = 0; // счетчик для согласных
 let numberOfvowels = 0; // счетчик для гласных
 for (let i = 0; i < word.length; i ++) {
-    if (consonantsRU.includes(word[i])) { // если содержит русскую согласную букву
+    if (consonantsRU.includes(word[i]) || consonantsEN.includes(word[i])) { 
         numberOfConsonants += 1;
-    } else if (vowelsRU.includes(word[i])) { // если содержит русскую гласную букву
+    } else if (vowelsRU.includes(word[i]) || vowelsEN.includes(word[i])) { 
         numberOfvowels += 1;
-    } else if (consonantsEN.includes(word[i])) { // если содержит английскую согласную букву
-        numberOfConsonants += 1;
-    } else if (vowelsEN.includes(word[i])) { // если содержит английскую гласную букву
-        numberOfvowels += 1;
-    }    
+    } 
 }
 console.log(`'${word}' contains ${numberOfvowels} vowels and ${numberOfConsonants} consonants`)
 

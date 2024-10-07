@@ -9,7 +9,7 @@
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9];
 for (let i = 0; i < array.length; i++) {
     if(array.includes(array[i], [i+1])) { // если значение элемента x встречается в массиве после элемента x
-        array.splice(array.lastIndexOf(array[i])); // то находим элемент x с конца по индексу и удаляем его
+        array.splice(array.lastIndexOf(array[i], 1)); // то находим элемент x с конца по индексу и удаляем его
     }
 }
 console.log(array); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

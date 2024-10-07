@@ -7,10 +7,11 @@
 //   const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
 
 const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const competitorPizzasLowerCased = competitorPizzas.join().toLowerCase().split(","); // перевожу пицыы конкурента в нижний регистр
 const myPizzas = ['Peperoni', 'Margherita', 'Vegetarian', 'Caprichosa', 'Diablo',  'BBQ Chicken', '4 Cheeses', 'Hawai', 'Super-Puper Pizza'];
 let myPizzasUnique = [];
 for (let i = 0; i < myPizzas.length; i++) {
-    if (!competitorPizzas.join().toLowerCase().split(",").includes(myPizzas[i].toLowerCase())) { // если моей пиццы нет у конкурента, 
+    if (!competitorPizzasLowerCased.includes(myPizzas[i].toLowerCase())) { // если моей пиццы нет у конкурента, 
         myPizzasUnique.push(myPizzas[i]); // добавляю ее в новый массив myPizzasUnique
     }
 }

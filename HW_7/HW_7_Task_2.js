@@ -21,7 +21,7 @@ console.log(checkPalindrome('aB7bA')); //true
 function findLongestWord(str) {
     const sentence = str.split(" ");
     let longestWord = "";
-    let longestWordsArr = [];
+    const longestWordsArr = [];
     for (const word of sentence) {
         if (longestWord.length < word.length) {
             longestWord = word;

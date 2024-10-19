@@ -18,8 +18,8 @@ console.log(stringTypeValues); //[ 'Barney', 'male' ]
 // 3. Создать массив из ключей и значений объекта character, перебрать массив циклом for. 
 //    На каждой итерации вывести пары ключ-значнение в виде `key = ${key}, value = ${value}`
 const objectToArray = Object.entries(character);
-for (const key of objectToArray) {
-    console.log(`"key" = ${key[0]}, "value" = ${key[1]},`);
+for (const [key, value] of objectToArray) {
+    console.log(`"key" = ${key}, "value" = ${value},`);
 };
 
 // 4. Проверить, есть ли в объекте ключ salary, результат вывести в консоль 

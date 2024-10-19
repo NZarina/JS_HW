@@ -12,7 +12,7 @@ someNums.forEach((num) => {
 
 //   2. map - создайте новый массив, в котором из каждого элемента изначального массива вычли длину изначального массива 
 //      // [-3, -2, -8, 20, 75, 85, 67, 84, 27, 21]
-const mapMethodArr = someNums.map((num) => num - someNums.length); 
+const mapMethodArr = someNums.map((num, index, origianlArr) => num - origianlArr.length); 
 console.log(mapMethodArr); // [-3, -2, -8, 20, 75, 85, 67, 84, 27, 21]
 
 //   3. filter - создайте новый массив, в который войдут лишь значения, которые больше предыдущего

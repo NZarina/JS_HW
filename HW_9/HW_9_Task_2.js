@@ -47,15 +47,13 @@ function updateCharacter(name, newCharacter) {
     if (typeof newCharacter !== 'object') {
       console.log('Введите данные в формате object');
     };
-    if(!newCharacter.hasOwnProperty('name') || !newCharacter.hasOwnProperty('age') || typeof newCharacter.name !== 'string' || typeof newCharacter.age !== 'number') {
-      console.log('Объект должен содержать параметр name с типом данных string и параметр age с типом данных number.');
-    }
+    const { name: newName, age: newAge } = newCharacter;
     const characterToChange = getCharacter(name);
     if (characterToChange) {
-      characterToChange.name = newCharacter.name;
-      characterToChange.age = newCharacter.age;  
+        characterToChange.name = (newName && typeof newName === 'string' && newName) || characterToChange.name;
+        characterToChange.age = (newAge && typeof newAge === 'number' && newAge) || characterToChange.age;
     }
-  }
+}
 
 updateCharacter('Fred',  { 'name': 'Tom', 'age': 35 });
 
